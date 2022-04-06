@@ -136,7 +136,7 @@ li a {
 
 #dark{
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   height: 50px;
   width: 50px;
   font-size: 2.5rem;
@@ -151,7 +151,7 @@ li a {
 #light{
   cursor: pointer;
   display: none;
-  position: fixed;
+  position: absolute;
   height: 50px;
   width: 50px;
   font-size: 2.5rem;
