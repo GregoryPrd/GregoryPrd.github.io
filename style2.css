@@ -21,6 +21,7 @@ a{ text-decoration: none; }
 }
 
 nav {
+  z-index: 12;
   width: 100%;
   font-size: 18px;
   position: sticky;
@@ -144,6 +145,10 @@ li a {
   margin-top: 50px;
 } 
 
+#dark:hover{
+  color: #2169EC;
+}
+
 #light{
   cursor: pointer;
   display: none;
@@ -156,6 +161,9 @@ li a {
   margin-top: 50px;
 }
 
+#light:hover{
+  color: #2169EC;
+}
 
 .header{
   text-transform: uppercase;
