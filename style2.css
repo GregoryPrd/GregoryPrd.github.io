@@ -261,8 +261,8 @@ li a {
   }
 
   .inspi {
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 250px;
   }
     .accroche{
     width:350px;
@@ -270,7 +270,7 @@ li a {
   }
   .titre{
     font-size: 15px;
-    width:350px;
+    width:300px;
   }
 
   .photo {
@@ -284,7 +284,7 @@ li a {
     transition: opacity 0.5s;
   }
   .txt{
-    width: 400px;
+    width: 300px;
     margin-right: auto;
     margin-left: auto;
     font-size: 13px;
