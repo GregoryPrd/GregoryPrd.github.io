@@ -141,8 +141,8 @@ li a {
   width: 50px;
   font-size: 2.5rem;
   right: 0;
-  margin-right: 50px;
-  margin-top: 50px;
+  margin-right: 25px;
+  margin-top: 25px;
 } 
 #dark:hover{
   color: #2169EC;
@@ -156,8 +156,8 @@ li a {
   width: 50px;
   font-size: 2.5rem;
   right: 0;
-  margin-right: 50px;
-  margin-top: 50px;
+  margin-right: 25px;
+  margin-top: 25px;
 }
 
 #light:hover{
@@ -248,6 +248,17 @@ le slider et le header vont s'adapter et changer de taille */
 
 @media screen and (max-width:830px) {
 
+
+  #dark{
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+
+  #light{
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+
   .slider {
     width: 300px;
     height: 500px;
@@ -285,8 +296,11 @@ le slider et le header vont s'adapter et changer de taille */
     font-size: 20px;
 }
   nav {
+    
     font-size: 15px;
 }
 
 
-
+.sous-menu{
+  font-size: 13px;
+}

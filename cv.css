@@ -142,8 +142,8 @@ li a {
   width: 50px;
   font-size: 2.5rem;
   right: 0;
-  margin-right: 50px;
-  margin-top: 50px;
+  margin-right: 25px;
+  margin-top: 25px;
 } 
 
 #dark:hover{
@@ -158,8 +158,8 @@ li a {
   width: 50px;
   font-size: 2.5rem;
   right: 0;
-  margin-right: 50px;
-  margin-top: 50px;
+  margin-right: 25px;
+  margin-top: 25px;
 }
 
 #light:hover{
@@ -205,4 +205,62 @@ li a {
  	width: 370px;
 
   }
+}
+
+@media screen and (max-width:830px) {
+
+
+  #dark{
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+
+  #light{
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+
+  .slider {
+    width: 300px;
+    height: 500px;
+  }
+
+  .suivant, .precedent {
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+  .suivant {
+    color: black;
+    right: 1rem;
+}
+
+  .precedent {
+    color: black;
+    left: 1rem;
+}
+  
+  .slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .header{
+    font-size: 20px;
+}
+  nav {
+    
+    font-size: 15px;
+}
+
+.sous-menu{
+  font-size: 13px;
 }

@@ -141,8 +141,8 @@ li a {
   width: 50px;
   font-size: 2.5rem;
   right: 0;
-  margin-right: 50px;
-  margin-top: 50px;
+  margin-right: 25px;
+  margin-top: 25px;
 } 
 
 #dark:hover{
@@ -157,8 +157,8 @@ li a {
   width: 50px;
   font-size: 2.5rem;
   right: 0;
-  margin-right: 50px;
-  margin-top: 50px;
+  margin-right: 25px;
+  margin-top: 25px;
 }
 
 #light:hover{
@@ -180,3 +180,119 @@ li a {
   padding: 100px;
 }
 
+.accroche{
+  font-size: 22px;
+  height: 200px;
+  width: 1000px;
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titre{
+  font-size: 20px;
+  height: 100px;
+  width: 700px;
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inspi{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  top: 0px;
+  width: 1000px;
+  height: 500px;
+  border: solid 4px white;
+  box-shadow: 0 0 14px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.txt{
+  width: 700px;
+  height: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media screen and (max-width:1040px) {
+
+  .inspi {
+    width: 800px;
+    height: 500px;
+  }
+  .accroche{
+    width:600px;
+  }
+
+
+@media screen and (max-width:830px) {
+
+
+  #dark{
+    margin-right: 15px;
+    font-size: 2rem;
+  }
+
+  #light{
+    margin-right: 15px;
+    font-size: 2rem;
+  }
+
+
+  .header{
+    font-size: 24px;
+  }
+
+  .inspi {
+    width: 400px;
+    height: 500px;
+  }
+    .accroche{
+    width:350px;
+    font-size: 18px;
+  }
+  .titre{
+    font-size: 15px;
+    width:350px;
+  }
+
+  .photo {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .txt{
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 13px;
+}
+  nav {
+    font-size: 15px;
+}
+
+.sous-menu{
+  font-size: 13px;
+}
