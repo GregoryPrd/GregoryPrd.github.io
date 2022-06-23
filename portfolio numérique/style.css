@@ -1,0 +1,364 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* barre de navigation*/
+
+:root {
+    --hauteur-menu: 60px;
+}
+
+nav {
+    z-index: 12;
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+}
+
+nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    height: var(--hauteur-menu);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    background-color: white;
+    position: relative;
+    height: 100%;
+    flex: 1;
+}
+
+nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-deroulant > a:after {
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+/* Ici, nous allons donner de la couleur aux menus
+ lorsque l'utilisateur passe la souris dessus */
+
+nav > ul > li:hover > a {
+    color: #2169EC;
+}
+
+.sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);
+}
+
+.sous-menu > li:hover > a {
+    color: white;
+}
+
+@keyframes rotationFleche {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.menu-deroulant:hover > a:after {
+    animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+    0% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
+        border-top: 3px solid #2169EC;
+    }
+    30% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        max-height: 50em;
+        border-top: 3px solid #2169EC;
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+}
+
+/* Icone pour le thème sombre */
+
+#dark {
+    cursor: pointer;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    right: 0;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+#dark:hover {
+    color: #2169EC;
+}
+
+#light {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    right: 0;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+#light:hover {
+    color: #2169EC;
+}
+
+.header {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 45px;
+}
+
+.header .header_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+/* Le slider*/
+
+.slider {
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    width: 1000px;
+    height: 500px;
+    border: solid 4px white;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: 350px;
+
+}
+
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.suivant, .precedent {
+    color: #fff;
+    font-size: 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.suivant {
+    color: black;
+    right: 1rem;
+}
+
+.precedent {
+    color: black;
+    left: 1rem;
+}
+
+.qui {
+    position: relative;
+    right: auto;
+    left: auto;
+    text-align: center;
+    top: -200px;
+    font-size: 45px;
+}
+
+.presentation {
+    font-size: 20px;
+    height: 100px;
+    width: 700px;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -150px;
+    margin-bottom: 150px;
+}
+
+.blabla {
+    font-size: 20px;
+    height: 100px;
+    width: 700px;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -150px;
+    margin-bottom: 150px;
+}
+
+#portrait{
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    width: 400px;
+    border: solid 4px white;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+#portrait img{
+    max-width: 100%;
+}
+
+/* Lorsque l' écran de la page devient de plus en plus petit,
+le slider et le header vont s'adapter et changer de taille */
+
+@media screen and (max-width: 1040px) {
+
+    .slider {
+        width: 800px;
+        height: 500px;
+    }
+
+    .header {
+        font-size: 35px;
+    }
+
+    @media screen and (max-width: 830px) {
+
+        #dark {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        #light {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .slider {
+            width: 300px;
+            height: 500px;
+        }
+
+        .suivant, .precedent {
+            color: #fff;
+            font-size: 2rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .suivant {
+            color: black;
+            right: 1rem;
+        }
+
+        .precedent {
+            color: black;
+            left: 1rem;
+        }
+
+        .slider img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .header {
+            font-size: 20px;
+        }
+
+        nav {
+
+            font-size: 15px;
+        }
+
+        .sous-menu {
+            font-size: 13px;
+        }
+
+        .qui {
+            font-size: 20px;
+        }
+
+        .presentation {
+            font-size: 15px;
+            width: 300px;
+            margin-bottom: 160px;
+        }
+
+        .blabla {
+            font-size: 15px;
+            width: 300px;
+            margin-bottom: 400px;
+        }
+    }
+}

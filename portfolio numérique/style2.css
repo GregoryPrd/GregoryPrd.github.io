@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* barre de navigation*/
+
+:root {
+    --hauteur-menu: 60px;
+}
+
+nav {
+    z-index: 12;
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+}
+
+nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    height: var(--hauteur-menu);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    background-color: white;
+    position: relative;
+    height: 100%;
+    flex: 1;
+}
+
+nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-deroulant > a:after {
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+/* Ici, nous allons donner de la couleur aux menus
+ lorsque l'utilisateur passe la souris dessus */
+
+nav > ul > li:hover > a {
+    color: #2169EC;
+}
+
+.sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);
+}
+
+.sous-menu > li:hover > a {
+    color: white;
+}
+
+@keyframes rotationFleche {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.menu-deroulant:hover > a:after {
+    animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+    0% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
+        border-top: 3px solid #2169EC;
+    }
+    30% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        max-height: 50em;
+        border-top: 3px solid #2169EC;
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+}
+
+/* Icone pour le thème sombre */
+
+#dark {
+    cursor: pointer;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    right: 0;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+#dark:hover {
+    color: #2169EC;
+}
+
+#light {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    right: 0;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+#light:hover {
+    color: #2169EC;
+}
+
+.header {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 45px;
+}
+
+.header .header_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.accroche {
+    font-size: 22px;
+    height: 200px;
+    width: 1000px;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titre {
+    font-size: 20px;
+    height: 100px;
+    width: 700px;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo1 {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inspi {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    top: 0px;
+    width: 1000px;
+    height: 500px;
+    border: solid 4px white;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.txt {
+    width: 700px;
+    height: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.slider {
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    width: 1000px;
+    height: 500px;
+    border: solid 4px white;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: 350px;
+
+}
+
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.suivant, .precedent {
+    color: #fff;
+    font-size: 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.suivant {
+    color: black;
+    right: 1rem;
+}
+
+.precedent {
+    color: black;
+    left: 1rem;
+}
+
+@media screen and (max-width: 1040px) {
+
+    .slider {
+        width: 800px;
+    }
+
+    .inspi {
+        width: 800px;
+        height: 500px;
+    }
+
+    .accroche {
+        width: 600px;
+    }
+
+    @media screen and (max-width: 830px) {
+
+        #dark {
+            margin-right: 15px;
+            font-size: 2rem;
+        }
+
+        #light {
+            margin-right: 15px;
+            font-size: 2rem;
+        }
+
+        .header {
+            font-size: 24px;
+        }
+
+        .inspi {
+            width: 300px;
+            height: 250px;
+        }
+
+        .accroche {
+            width: 350px;
+            font-size: 18px;
+        }
+
+        .titre {
+            font-size: 15px;
+            width: 300px;
+        }
+
+        .photo {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .txt {
+            width: 300px;
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 13px;
+        }
+
+        nav {
+            font-size: 15px;
+        }
+
+        .sous-menu {
+            font-size: 13px;
+        }
+        .slider {
+            width: 300px;
+            height: 250px;
+        }
+            .slider img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+             .suivant, .precedent {
+            color: #fff;
+            font-size: 2rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .suivant {
+            color: black;
+            right: 1rem;
+        }
+
+        .precedent {
+            color: black;
+            left: 1rem;
+        }
+    }
+}
